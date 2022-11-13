@@ -1,0 +1,133 @@
+#content{
+    position: absolute;
+    /* background-color: beige; */
+    left: 270px;
+    top: 60px;
+    width: 1120px;
+    margin: 0;
+}
+
+.thanh-thong-tin{
+    width: auto;
+    height: 40px;
+    display: flex;
+    background-color: antiquewhite;
+    line-height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.thanh-thong-tin p{
+    /* margin-right: 550px; */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.thanh-thong-tin #clock{
+    position: absolute;
+    right: 40px;
+}
+
+.row {
+    background-color: antiquewhite;
+    margin-top: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.tile-body .element-button{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tile-body .element-button .col-sm-2{
+    margin-right: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.tile-body .element-button .col-sm-2 a{
+    text-decoration: none;
+}
+
+.tile-body .element-button .col-sm-2:hover a{
+    color: red;
+}
+
+#sampleTable{
+    margin: auto;
+}
+
+thead{
+    background-color:darkturquoise;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+thead th{
+    /* width: 130px; */
+    width: fit-content;
+}
+
+tbody {
+    text-align: left;
+    font-size: 18px;
+}
+
+/*Form thêm mới phim*/
+form{
+    padding-left: 60px;
+    background-color: antiquewhite;
+}
+
+.form-them{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.form-them label{
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.form-them input{
+    width: 900px;
+    height: 40px;
+    background-color:gainsboro;
+}
+
+#noi-dung{
+    height: 100px;
+}
+
+.button input[type=submit]
+{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button .cancel
+{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+

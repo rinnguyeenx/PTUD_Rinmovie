@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+}
+
+.app-sidebar__overlay{
+    background-color: wheat;
+    height: 50px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 2;
+}
+
+/* sidebar left */
+aside{
+    top: 50px;
+    width: 250px;
+    height: 100%;
+    display: block;
+    background-color:wheat;
+    float: left;
+    position: fixed;
+    z-index: 2;
+}
+
+.app-sidebar__user{
+    width: auto;
+    height: 270px;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.app-sidebar__user img{
+    margin-bottom: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+.app-menu{
+    list-style-type: none;
+    font-size: 22px;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.app-menu .app-menu-item i{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.app-menu .app-menu-item .app-menu-label{
+    margin-left: 5px;
+    color: black;
+}
+
+.app-menu .app-menu-item{
+    text-decoration: none;
+}
+
+.app-menu li{
+    /* margin-bottom: 40px; */
+    height: 70px;
+    line-height: 70px;
+    padding-left: 20px;
+    display: block;
+}
+
+.app-menu li:hover {
+    background-color: darkred;
+}
+
+.app-menu li:hover a{
+    color: white;
+}
+

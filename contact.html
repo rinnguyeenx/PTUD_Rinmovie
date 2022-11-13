@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .form-lien-he{
+            display: flex;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .form-lien-he form{
+            margin: auto;
+        }
+
+        label{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input[type=text], input[type=email], select, textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            display: block;
+        }
+
+        input[type=submit]{
+            background-color: green;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Liên hệ</h1>
+    <div class="form-lien-he">
+        <form action="">
+            <label for="ho-lien-he">Họ</label>
+            <input type="text" id="ho-lien-he" name="ho" placeholder="Họ của bạn...">
+
+            <label for="ten-lien-he">Tên</label>
+            <input type="text" name="ten-lien-he" id="ten" placeholder="Tên của bạn...">
+
+            <label for="email">Email <span style="color: red;">*</span></label>
+            <input type="email" name="email" id="email" placeholder="Email..." required>
+
+            <label for="SDT">Số điện thoại</label> 
+            <input type="text" name="SDT" id="SDT">
+
+            <label for="country">Quốc tịch</label>
+            <select name="country" id="country">
+                <option value="vietnam" selected>Việt Nam</option>
+                <option value="my">Mỹ</option>
+                <option value="anh">Anh</option>
+                <option value="hanquoc">Hàn Quốc</option>
+                <option value="nhatban">Nhật Bản</option>
+            </select>
+
+            <label for="noi-dung">Nội dung <span style="color: red;">*</span></label>
+            <textarea name="noi-dung" id="noi-dung" placeholder="Nhập nội dung..." style="height: 200px; width: 600px;" required></textarea>
+            <input type="submit" name="gui" value="Gửi">
+        </form>
+    </div>
+</body>
+</html>

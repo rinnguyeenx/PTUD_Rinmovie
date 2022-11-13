@@ -1,0 +1,797 @@
+* {
+    margin:0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+}
+
+/* Header */
+#header{
+    height: 35px;
+    background-color: wheat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#header .cach-lien-lac ul{
+    display: flex;
+    margin-left: 30px;
+}
+
+#header .cach-lien-lac ul>li{
+    list-style-type: none;
+    padding-right: 120px;
+}
+
+#header .icon{
+    position: absolute;
+    right: 50px;
+}
+
+#header a{
+    text-decoration: none;
+}
+
+#header img{
+    width: 28px;
+    height: 28px;
+    margin: 0 10px 0 10px;
+}
+
+/* navigation bar */
+#navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    line-height: 50px;
+}
+
+.menu-list a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #FFD700;
+    cursor: pointer;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    color: white;
+    list-style-type: none;
+}
+
+.menu-list li{
+    height: 50px;
+    width: 140px;
+}
+
+@keyframes menu-animation {
+    0% {padding: 0px;}
+    20% {padding-left: 20px;}
+}
+
+.menu-list li:hover {
+    background-color: green;
+}
+
+.menu-list-item{
+    /* margin-left: 30px; */
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+/* submenu cho the loai */
+.menu-list-item .the-loai{
+    display: none;
+    position:absolute;
+    left: 50px;
+    background-color: inherit;
+    width: 100%;
+    z-index: 8;
+    align-items: center;
+}
+
+.menu-list-item .the-loai li{
+    float: left;
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    width: 150px;
+    line-height: 50px;
+}
+
+.menu-list-item:hover .the-loai{
+    display: block;
+}
+
+.menu-list-item .the-loai li:hover{
+    background-color: white;
+    color: black;
+}
+
+/* submenu cho the loai phim vien tuong */
+.menu-list-item .the-loai li{
+background-color: inherit;
+color: white;
+}
+
+.menu-list-item .the-loai .phim{
+    display: none;
+    width: fit-content;
+    list-style: none;
+    line-height: 50px;
+    background-color: white;
+    position: relative;
+}
+
+.menu-list-item .the-loai .phim li{
+    width: 300px;
+    float: left;
+    text-align: left;
+    padding-left: 15px;
+    color: black;
+}
+
+.menu-list-item .the-loai .phim img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+}
+
+.menu-list-item .the-loai>li:hover .phim{
+    display: block;
+}
+
+.menu-list-item .the-loai .phim li:hover{
+    background-color: #4dbf00;
+    color: white;
+    animation-name: menu-animation;
+    animation-duration: 1s;
+}
+
+/* submenu cho pho bien */
+.menu-list-item .pho-bien{
+    display: none;
+    background-color: inherit;
+    padding-left: 0px;
+}
+
+.menu-list-item .pho-bien li{
+    width: inherit;
+    display: block;
+    list-style-type: none;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.menu-list-item .pho-bien li:hover{
+    background-color: white;
+    color: black;
+    animation-name: menu-animation;
+    animation-duration: 1s;
+}
+
+.menu-list-item:hover ul {
+    display: block;
+}
+
+/* khu nguoi dung */
+.user-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+
+.quan-ly-user{
+    position: relative;
+    display: inline-block;
+}
+
+.user-detail{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 7;
+}
+
+.user-detail .detail{
+    padding-left: 0px;
+}
+
+.user-detail .detail li{
+    color: black;
+    display: block;
+    list-style-type: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.quan-ly-user:hover .user-detail{
+    display: block;
+}
+
+.quan-ly-user .user-detail .detail li:hover{
+    background-color: #FFD700;
+}
+
+.user-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-text-container{
+    margin: 0 20px;
+}
+
+.mode{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    cursor:pointer;
+}
+
+.mode-icon{
+    color: goldenrod;
+}
+
+.mode-ball{
+    width: 19px;
+    height: 19px;
+    background-color: black;
+    position: absolute;
+    right: 2.5px;
+    border-radius: 50%;
+}
+
+/* sidebar left */
+#sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    z-index: 8;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+.left-menu-icon .tool-tip-text{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    visibility: hidden;
+    width: 120px;
+    color: white;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 6;
+    left: 102%;
+    color: black;
+    text-transform:capitalize;
+    font-family: 'Times New Roman';
+}
+
+.left-menu-icon:hover .tool-tip-text{
+    visibility: visible;
+}
+
+.tim-kiem{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 4;
+    top: 80px;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.tim-kiem .search-content .thanh-tim-kiem{
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+.tim-kiem input{
+    height: 50px;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    float: left;
+    width: 80%;
+    background-color: white;
+}
+
+.tim-kiem button{
+    height: 50px;
+    float: left;
+    width: 60px;
+    padding: 15px;
+    background:#ddd;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.tim-kiem .close:hover{
+    color: #ccc;
+}
+
+.tim-kiem .close{
+    position:absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* content */
+#content{
+    margin-left: 50px;
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;    
+}
+
+.auto-slide{
+    display: none;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.auto-slide{
+    cursor: pointer;
+    padding: 50px;
+    height: 85vh;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    width: auto;
+    /* display: none; */
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.small-img-title{
+    width: 270px;
+    padding-top: 100px;
+}
+
+.small-img-description{
+    color: white;
+    margin: 10px 0;
+    width: 500px;
+    overflow: hidden;
+}
+
+.slide-watch-button{
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    float: left;
+}
+
+.star{
+    float: left;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.star-rate .checked{
+    color: yellow;
+}
+
+.star{
+    position: relative;
+}
+
+.movie-list-container{
+    padding: 15px 10px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.movie-list-title{
+    background-color: #FFD700;
+    border-radius: 5px;
+    color: #151515;
+    font-weight: bold;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 15px;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    z-index: 1;
+    margin-right:30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-name,
+.movie-list-item:hover .movie-description,
+.movie-list-item:hover .movie-list-button {
+    opacity:1;
+}
+
+.movie-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.movie-name{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transform: 1s all ease-in-out;
+    color: white;
+    opacity: 0;
+}
+
+.movie-description{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    transition: 1s all ease-in-out;
+    opacity: 0;
+}
+
+.movie-list-button{
+    padding: 10px;
+    background: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    left: 105px;
+    transition: 1s all ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.arrow:hover{
+    opacity: 1;
+}
+
+/* Dang ky goi xem phim */
+.goi-phim{
+    height: 65vh;
+}
+
+.goi-phim h3{
+    background-color: #FFD700;
+    border-radius: 5px;
+    color: #151515;
+    font-weight: bold;
+    height: 40px;
+    align-content: center;
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 15px;
+}
+
+.bang-dich-vu{
+    margin-top: 15px;
+    background-color:antiquewhite;
+}
+
+table{
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    height: 400px;
+}
+
+.goi{
+    background-color: red;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 20px;
+}
+
+.tieu-chi{
+    width: 200px;
+    padding: 15px 20px 15px 20px;
+}
+
+tr .gia-tri{
+    text-align: center;
+}
+
+.fa-check{
+    color: green;
+}
+
+.fa-remove{
+    color: red;
+}
+
+.tiep-tuc-button{
+    height: 40px;
+    width: 120px;
+    position: relative;
+    margin-top: 10px;
+    background-color: red;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    left: 47%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tiep-tuc-button:hover{
+    background-color: #FFD700;
+}
+
+/*gioi thieu phim*/
+.gioi-thieu-phim{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 100px;
+    background-color: white;
+    display: flex;
+}
+
+.gioi-thieu-phim p{
+    color: black;
+    width: 75%;
+    margin: 60px 10px 50px 80px;
+    float: left;
+    text-align: justify;
+    padding: 10px;
+    border: solid goldenrod;
+}
+
+.gioi-thieu-phim .vid{
+    height: auto;
+    width: auto;
+    margin: 30px 30px;
+}
+
+/*dien vien*/
+.list-dien-vien{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.list-dien-vien .dien-vien{
+    width: 160px;
+    height: 220px;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.list-dien-vien .dien-vien img{
+    width: 160px;
+    height: 200px;
+}
+
+/* footer */
+#footer{
+    height: 300px;
+    width: 100%;
+    background-color: wheat;
+}
+
+#footer .thong-tin{
+    width: 250px;
+    float: left;
+    margin: 50px 0px 40px 50px;
+}
+
+#footer .thong-tin ul li{
+    list-style: none;
+    padding-bottom: 25px;
+    font-size: 18px;
+}
+
+#footer .icon-lien-he{
+    float: left;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+#footer .icon-lien-he .get-in-touch li{
+    list-style: none;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+#footer .qr-code{
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#footer .qr-code p{
+    text-align: center;
+}
+
+#footer .qr-code img{
+    width: 250px;
+    height: 200px;
+}
+
+#footer .dai-dien{
+    float: left;
+    margin-top:40px;
+    margin-left: 60px;
+}
+
+#footer .dai-dien img{
+    width: 400px;
+    height: 200px;
+}
+
+#footer .copyrights{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
